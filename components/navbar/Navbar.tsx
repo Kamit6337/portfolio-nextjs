@@ -3,7 +3,6 @@
 import { navLinkList } from "@/constants";
 import { ModeToggle } from "../darkToggle/ModeToggle";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
@@ -24,11 +23,13 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleClick = (href) => (e) => {
+  const handleClick = (href: string) => (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const offsetTop = document.querySelector(href).offsetTop;
+    const selectedDiv = document.querySelector(href) as HTMLElement;
+    const offsetTop = selectedDiv.offsetTop;
+
     window.scrollTo({
-      top: offsetTop - 0, // Adjust this value as needed
+      top: offsetTop, // Adjust this value as needed
       behavior: "smooth",
     });
   };

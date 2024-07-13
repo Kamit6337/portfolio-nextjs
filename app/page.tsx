@@ -16,7 +16,7 @@ export default function Home() {
       <PersonalDetails id="about" />
       <Contact id="contact" />
       <Footer />
-      <div className="section_padding fixed top-0 z-10 h-20 w-full flex items-center">
+      <div className="section_padding fixed top-0 z-20 h-20 w-full flex items-center">
         <Navbar />
       </div>
     </main>
