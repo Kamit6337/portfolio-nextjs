@@ -26,8 +26,9 @@ const ProjectsData = [
         icon: (
           <Image
             alt="image"
+            width={30}
+            height={30}
             src={CustomImages.reactQuery}
-            className="w-10 h-10"
           />
         ),
         name: "React-Query",
@@ -57,9 +58,10 @@ const ProjectsData = [
       {
         icon: (
           <Image
+            width={50}
+            height={50}
             src={CustomImages.mongoose}
             alt="mongoose"
-            className="w-20 sm_lap:w-16 target:w-12"
           />
         ),
         name: "Mongoose",
@@ -98,11 +100,7 @@ const ProjectsData = [
       },
       {
         icon: (
-          <Image
-            alt="image"
-            src={CustomImages.axios}
-            className="w-12 tablet:w-10 mobile:w-8"
-          />
+          <Image width={40} height={40} alt="image" src={CustomImages.axios} />
         ),
         name: "Axios",
       },
@@ -110,8 +108,9 @@ const ProjectsData = [
         icon: (
           <Image
             alt="image"
+            width={30}
+            height={30}
             src={CustomImages.reactQuery}
-            className="w-10 h-10"
           />
         ),
         name: "React-Query",
@@ -120,8 +119,9 @@ const ProjectsData = [
         icon: (
           <Image
             alt="image"
+            width={25}
+            height={25}
             src={CustomImages.nextAuth}
-            className="w-8 tablet:w-6 mobile:w-4"
           />
         ),
         name: "Next-Auth",
@@ -135,7 +135,8 @@ const ProjectsData = [
           <Image
             src={CustomImages.mongoose}
             alt="mongoose"
-            className="w-20 sm_lap:w-16 target:w-12"
+            width={50}
+            height={50}
           />
         ),
         name: "Mongoose",
@@ -172,9 +173,10 @@ const ProjectsData = [
       {
         icon: (
           <Image
+            width={30}
+            height={30}
             alt="image"
             src={CustomImages.reactQuery}
-            className="w-10 h-10"
           />
         ),
         name: "React-Query",
@@ -208,9 +210,10 @@ const ProjectsData = [
       {
         icon: (
           <Image
+            width={50}
+            height={50}
             src={CustomImages.mongoose}
             alt="mongoose"
-            className="w-20 sm_lap:w-16 target:w-12"
           />
         ),
         name: "Mongoose",
@@ -222,11 +225,7 @@ const ProjectsData = [
 
       {
         icon: (
-          <Image
-            alt="image"
-            src={CustomImages.axios}
-            className="w-12 tablet:w-10 mobile:w-8"
-          />
+          <Image alt="image" width={40} height={40} src={CustomImages.axios} />
         ),
         name: "Axios",
       },

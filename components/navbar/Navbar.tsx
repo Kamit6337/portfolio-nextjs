@@ -38,7 +38,7 @@ const Navbar = () => {
     <div
       className={`${
         toggleNav &&
-        "border border-slate-500 rounded-full  bg-background px-5  md:px-10 md:py-1 "
+        "border border-slate-500 rounded-full bg-background px-5 md:px-10 lg:py-1"
       }  w-full flex justify-between items-center transition-all duration-700`}
     >
       {navLinkList.map((obj, i) => {

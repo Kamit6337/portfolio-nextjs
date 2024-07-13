@@ -96,10 +96,14 @@
 
 @layer utilities {
   .section_padding {
-    @apply px-10 sm:px-16 md:px-24 lg:px-40 xl:px-60;
+    @apply w-full px-10 sm:px-16 md:px-24 lg:px-40 xl:px-60;
   }
 
   .navbar_link {
-    @apply text-xs sm:text-sm md:text-base lg:text-lg;
+    @apply text-xs sm:text-sm lg:text-base tracking-wider;
+  }
+
+  .section_title {
+    @apply font-bold text-6xl tracking-wider uppercase;
   }
 }

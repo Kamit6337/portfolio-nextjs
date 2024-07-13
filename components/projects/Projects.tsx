@@ -4,12 +4,15 @@ import ProjectsData from "@/data/projects";
 import Image from "next/image";
 
 import { useState } from "react";
+import { Dialog, DialogTrigger } from "../ui/dialog";
+import { Button } from "../ui/button";
+import SingleProject from "./SingleProject";
 
 const Projects = ({ ...props }) => {
   const [index, setIndex] = useState(null);
   const [toggleShadow, setToggleShadow] = useState(false);
 
-  const handleMouseEnter = (i: Number) => {
+  const handleMouseEnter = (i: number) => {
     setIndex(i);
     setToggleShadow(true);
   };
@@ -20,9 +23,15 @@ const Projects = ({ ...props }) => {
   };
 
   return (
-    <div {...props}>
-      <p>Projects</p>
-      <div className="w-full flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center gap-10 ">
+    <div {...props} className="section_padding pb-40">
+      <div className="text-center space-y-2 mb-20">
+        <p className="section_title">Projects</p>
+        <p className="text-sm tracking-wide">
+          Projects cover MERN Stack with Next JS, both are popular framework for
+          making industry level, well developed and scalable Full-Stack Web Apps
+        </p>
+      </div>
+      <div className="w-full flex flex-col gap-32 items-center md:grid md:grid-cols-2 md:justify-items-center md:gap-y-32 ">
         {ProjectsData.map((project, i) => {
           const { title, category, image } = project;
 
@@ -40,15 +49,20 @@ const Projects = ({ ...props }) => {
                 <p className="portfolio_category">({category})</p>
               </div>
 
-              <div
-                className={`${
-                  toggleShadow && i === index && "gradient_link_shadow"
-                } mx-auto rounded-lg px-6 py-2 w-max gradient_link text-white duration-200 cursor-pointer`}
-                onMouseEnter={() => handleMouseEnter(i)}
-                onMouseLeave={handleMouseLeave}
-              >
-                View Full Detail
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div
+                    className={`${
+                      toggleShadow && i === index && "gradient_link_shadow"
+                    } mx-auto rounded-lg px-6 py-2 w-max gradient_link text-white duration-200 cursor-pointer`}
+                    onMouseEnter={() => handleMouseEnter(i)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    View Full Detail
+                  </div>
+                </DialogTrigger>
+                <SingleProject project={project} />
+              </Dialog>
             </div>
           );
         })}

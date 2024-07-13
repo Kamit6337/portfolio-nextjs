@@ -17,7 +17,7 @@ const Hero = ({ ...props }) => {
           className="rounded-full border border-slate-400"
         />
         <p className="mt-2 ">Hi, I&apos;m</p>
-        <p className="uppercase text-4xl">Amit Kumar</p>
+        <p className="uppercase text-4xl tracking-wide">Amit Kumar</p>
         <p className="text-center text-xs tracking-wider mt-3">
           A PROFICIENT IN HIS SKILL AND WOULD LOVE TO COLLABORATE WITH OTHER
           PEOPLES TO MAKE A BIG THING.
