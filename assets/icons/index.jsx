@@ -22,18 +22,19 @@ import { MdOutlineCancel } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BsDashLg } from "react-icons/bs";
 import { SiNextdotjs } from "react-icons/si";
-import { FaLinkedin, FaGithub, FaStripe } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaStripe } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { IoIosArrowUp } from "react-icons/io";
 import { TbSeo } from "react-icons/tb";
+import { CiMail } from "react-icons/ci";
 
 const ReactIcons = {
   seo: <TbSeo />,
   upArrow: <IoIosArrowUp />,
   stripe: <FaStripe />,
-  mail: <IoMail />,
+  mail: <CiMail />,
   github: <FaGithub />,
-  linkedIn: <FaLinkedin />,
+  linkedIn: <FaLinkedinIn />,
   nextjs: <SiNextdotjs />,
   dash: <BsDashLg />,
   arrowRight: <FaArrowRightLong />,

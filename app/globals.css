@@ -29,6 +29,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --qualification-line-dot-color: 255 255 255;
+    --qualification-line-color: #94948d;
+    --navbar-link-hover: (132, 144, 255);
   }
 
   .dark {
@@ -56,6 +59,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --qualification-line-color: #c9c304;
+    --navbar-link-hover: (132, 144, 255);
   }
 }
 
@@ -94,6 +99,17 @@
   box-shadow: 0px 0px 10px 2px rgba(132, 144, 255, 0.7);
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(132, 144, 255);
+  transform-origin: 0%;
+  z-index: 999;
+}
+
 @layer utilities {
   .section_padding {
     @apply w-full px-10 sm:px-16 md:px-24 lg:px-40 xl:px-60;
@@ -105,5 +121,25 @@
 
   .section_title {
     @apply font-bold text-6xl tracking-wider uppercase;
+  }
+
+  .section_intro {
+    @apply text-sm tracking-wide md:w-3/4  mx-auto;
+  }
+
+  .qualification_title {
+    @apply text-xl font-semibold tracking-wide text-slate-800 text-center;
+  }
+
+  .qualification_div {
+    @apply bg-white shadow-xl dark:shadow-none rounded  pt-2 pb-8 px-2 flex flex-col items-center;
+  }
+
+  .qualification_dot_outer {
+    @apply absolute z-10 w-5 h-5 rounded-full border border-slate-400 dark:border-none bg-dot flex items-center justify-center;
+  }
+
+  .qualification_dot_inner {
+    @apply absolute z-10 w-3 h-3 rounded-full bg-blue-700 dark:bg-yellow-200;
   }
 }

@@ -38,7 +38,7 @@ const SingleProject = ({ project }) => {
             </a>
           </div>
         </div>
-        <div className="flex-1 flex flex-col ">
+        <div className="flex-1 flex flex-col">
           <div>
             <p className="portfolio_title">{title}</p>
             <p className="portfolio_category">({category})</p>
@@ -73,6 +73,20 @@ const SingleProject = ({ project }) => {
                 </div>
               );
             })}
+          </div>
+          <div className="md:hidden grid grid-cols-2 gap-x-2 mt-10">
+            <a href={github} target="_blank" rel="noreferrer">
+              <p className="flex justify-center items-center text-xl py-2 border rounded ">
+                {ReactIcons.github}
+              </p>
+            </a>
+            <a href={preview} target="_blank" rel="noreferrer">
+              <div
+                className={`hover:gradient_link_shadow text-center rounded py-2 cursor-pointer gradient_link text-white duration-200`}
+              >
+                Preview
+              </div>
+            </a>
           </div>
         </div>
       </div>

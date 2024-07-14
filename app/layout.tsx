@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import TracingBeamProvider from "@/providers/TracingBeamProvider";
+import SmoothScrolling from "@/components/ui/smooth-scrolling";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SmoothScrolling>{children}</SmoothScrolling>
         </ThemeProvider>
       </body>
     </html>
