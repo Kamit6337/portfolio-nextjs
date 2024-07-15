@@ -5,7 +5,7 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 const Hero = ({ ...props }) => {
-  const para = "A Full Stack Web Developer in MERN Stack and Next JS";
+  const para = "A Full Stack Web Developer in MERN and Next JS";
   const newWords = para.split(" ").map((el) => ({ text: el }));
 
   return (

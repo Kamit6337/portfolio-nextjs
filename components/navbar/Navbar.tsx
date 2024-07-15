@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState("");
   const [toggleNav, setToggleNav] = useState(false);
 
   useEffect(() => {
@@ -16,7 +17,6 @@ const Navbar = () => {
         setToggleNav(false);
       }
     };
-
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -24,11 +24,43 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry.target.id, entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    }, options);
+
+    navLinkList.forEach((link) => {
+      const section = document.getElementById(link.href);
+      if (section) {
+        console.log(`Observing section: ${link.href}`);
+        observer.observe(section);
+      } else {
+        console.log(`Non Observing section: ${link.href}`);
+      }
+    });
+
+    return () => {
+      navLinkList.forEach((link) => {
+        const section = document.getElementById(link.href);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
   const handleClick = (href: string) => (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
-    console.log(href);
-
     const selectedDiv = document.querySelector(href) as HTMLElement;
     const offsetTop = selectedDiv.offsetTop;
 
@@ -47,10 +79,13 @@ const Navbar = () => {
         }  w-full flex justify-between items-center transition-all duration-700`}
       >
         {navLinkList.map((obj, i) => {
+          const isActive = activeLink === obj.href;
           return (
             <div key={i}>
               <p
-                className="navbar_link cursor-pointer hover:text-navbar_link"
+                className={`navbar_link cursor-pointer hover:border-b hover:border-foreground
+                  ${isActive ? "border-b border-foreground" : ""}
+                  `}
                 onClick={handleClick(`#${obj.href}`)}
               >
                 {obj.name}
@@ -71,10 +106,14 @@ const Navbar = () => {
         className="bg-background  text-foreground w-full flex justify-between items-center px-5 md:px-10 lg:py-1"
       >
         {navLinkList.map((obj, i) => {
+          const isActive = activeLink === obj.href;
+
           return (
             <div key={i}>
               <p
-                className="navbar_link cursor-pointer hover:border-b hover:border-foreground"
+                className={`navbar_link cursor-pointer hover:border-b hover:border-foreground
+                ${isActive ? "border-b border-foreground" : ""}
+                `}
                 onClick={handleClick(`#${obj.href}`)}
               >
                 {obj.name}

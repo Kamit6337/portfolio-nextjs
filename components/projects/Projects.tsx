@@ -23,23 +23,26 @@ const Projects = ({ ...props }) => {
   };
 
   return (
-    <div {...props} className="section_padding pb-40">
+    <div {...props} className="pb-40 md:px-10 lg:px-20">
       <div className="text-center space-y-2">
         <p className="section_title">Projects</p>
-        <p className="section_intro">
+        <p className="section_intro px-2">
           Projects cover MERN Stack with Next JS, both are popular framework for
           making industry level, well developed and scalable Full-Stack Web Apps
         </p>
       </div>
 
-      <div className="w-full flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center md:gap-y-0 ">
+      <div className="w-full flex flex-col items-center sm:grid sm:grid-cols-2 sm:justify-items-center md:gap-y-0 ">
         {ProjectsData.map((project, i) => {
           const { title, category, image } = project;
 
           return (
             <CardContainer className="inter-var" key={i}>
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl border  w-96 flex flex-col gap-4 items-center pb-10">
-                <CardItem translateZ="60" className="h-[420px] rounded-xl">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl border lg:w-96 md:w-[350px] w-72 flex flex-col gap-4 items-center pb-10">
+                <CardItem
+                  translateZ="60"
+                  className="md:h-[420px] h-80 rounded-xl"
+                >
                   <Image
                     src={image}
                     alt="portfolio"
