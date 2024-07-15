@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Qualifications = () => {
-  const [width, setWidth] = useState(null);
-  const [margin, setMargin] = useState(null);
+  const [width, setWidth] = useState<number | null>(null);
+  const [margin, setMargin] = useState<number | null>(null);
   const [mobileView, setMobileView] = useState(false);
 
   useEffect(() => {

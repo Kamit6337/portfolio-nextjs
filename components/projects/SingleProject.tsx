@@ -1,5 +1,4 @@
-import { DialogContent, DialogFooter } from "@/components/ui/dialog";
-import { Button } from "../ui/button";
+import { DialogContent } from "@/components/ui/dialog";
 import Image from "next/image";
 import ReactIcons from "@/assets/icons";
 
@@ -7,9 +6,13 @@ type Project = {
   title: string;
   category: string;
   image: any;
+  details: string[];
+  icons: { name: string; icon: React.ReactNode }[];
+  github: string;
+  preview: string;
 };
 
-const SingleProject = ({ project }) => {
+const SingleProject = ({ project }: { project: Project }) => {
   const { title, category, image, details, icons, github, preview } = project;
 
   return (

@@ -9,7 +9,7 @@ import SingleProject from "./SingleProject";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
 const Projects = ({ ...props }) => {
-  const [index, setIndex] = useState(null);
+  const [index, setIndex] = useState<number | null>(null);
   const [toggleShadow, setToggleShadow] = useState(false);
 
   const handleMouseEnter = (i: number) => {

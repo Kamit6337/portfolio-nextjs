@@ -27,7 +27,7 @@ const MapComponent = ({ latitude, longitude }) => {
   }, [center.lng, center.lat, zoom]);
 
   return (
-    <div className="relative w-full h-96 z-0">
+    <div className="relative w-full h-full z-0">
       <div ref={mapContainer} className="absolute w-full h-full" />
     </div>
   );
