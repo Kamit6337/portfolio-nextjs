@@ -23,10 +23,10 @@ const Projects = ({ ...props }) => {
   };
 
   return (
-    <div {...props} className="pb-40 md:px-10 lg:px-20">
+    <div {...props} className="pb-40 px-5 md:px-10 lg:px-20">
       <div className="text-center space-y-2">
         <p className="section_title">Projects</p>
-        <p className="section_intro px-2">
+        <p className="section_intro">
           Projects cover MERN Stack with Next JS, both are popular framework for
           making industry level, well developed and scalable Full-Stack Web Apps
         </p>

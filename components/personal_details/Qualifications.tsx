@@ -39,7 +39,7 @@ const Qualifications = () => {
   if (!mobileView) {
     return (
       <div className="flex flex-col items-center">
-        <p className="text-4xl font-semibold tracking-wider mb-28 ">
+        <p className="text-4xl font-semibold tracking-wider md:mb-28 mb-20">
           My Qualifications
         </p>
 
@@ -261,7 +261,7 @@ const Qualifications = () => {
   /* WORK: MOBILE VIEW */
   return (
     <div className="w-full">
-      <p className="text-4xl font-semibold tracking-wider mb-28 text-center ">
+      <p className="text-3xl font-semibold tracking-wider mb-28 text-center ">
         My Qualifications
       </p>
       <div className="w-full flex flex-col items-center gap-8 ">

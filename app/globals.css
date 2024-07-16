@@ -120,11 +120,11 @@
   }
 
   .section_title {
-    @apply font-bold text-6xl tracking-wider uppercase;
+    @apply font-bold md:text-6xl text-4xl  tracking-wider uppercase;
   }
 
   .section_intro {
-    @apply text-sm tracking-wide md:w-3/4  mx-auto;
+    @apply text-sm  tracking-wide md:w-3/4  mx-auto;
   }
 
   .qualification_title {

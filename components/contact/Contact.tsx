@@ -48,10 +48,12 @@ const Contact = ({ ...props }) => {
             );
           })}
         </div>
-        <p className="text-4xl font-bold tracking-wide mt-20 mb-6">
+        <p className="md:text-4xl text-3xl font-bold tracking-wide mt-20 mb-6">
           Contact Me
         </p>
-        <p className="text-2xl font-semibold tracking-wider">{EMAIL}</p>
+        <p className="md:text-2xl text-xl  font-semibold tracking-wider">
+          {EMAIL}
+        </p>
       </div>
     </main>
   );
