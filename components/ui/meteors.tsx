@@ -1,6 +1,8 @@
+"use client";
+
 import { cn } from "@/utils/cn";
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const Meteors = ({
   number,
@@ -10,6 +12,30 @@ export const Meteors = ({
   className?: string;
 }) => {
   const meteors = new Array(number || 20).fill(true);
+  const [left, setLeft] = useState(600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 650) {
+        setLeft(100);
+      } else if (window.innerWidth <= 780) {
+        setLeft(250);
+      } else if (window.innerWidth <= 1030) {
+        setLeft(400);
+      } else {
+        setLeft(600);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {meteors.map((el, idx) => (
@@ -22,7 +48,7 @@ export const Meteors = ({
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (1000 - -400) + -400) + "px",
+            left: Math.floor(Math.random() * (left - -400) + -400) + "px",
             animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
             animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
           }}

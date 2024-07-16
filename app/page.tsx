@@ -8,7 +8,7 @@ import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
-    <main className="relative w-full h-full mt-20">
+    <main className="relative w-screen h-full mt-20">
       <Hero id="hero" />
       <Skills id="skills" />
       <Projects id="projects" />

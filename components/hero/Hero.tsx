@@ -10,7 +10,7 @@ const Hero = ({ ...props }) => {
 
   return (
     <div className="h-screen relative section_padding " {...props}>
-      <div className="h-full flex justify-center items-center">
+      <div className="h-full">
         <Meteors className="" number={50} />
       </div>
       <div className="absolute z-10 top-0 left-0 h-full w-full flex flex-col justify-center items-center section_padding">
