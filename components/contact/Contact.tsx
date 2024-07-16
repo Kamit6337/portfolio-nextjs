@@ -41,7 +41,7 @@ const Contact = ({ ...props }) => {
 
             return (
               <a href={link} target="_blank" rel="noreferrer" key={i}>
-                <div className="rounded-full p-4 bg-slate-700 text-3xl">
+                <div className="rounded-full p-4 dark:bg-slate-700 bg-white border border-slate-800 hover:bg-gray-100  text-3xl">
                   {icon}
                 </div>
               </a>
