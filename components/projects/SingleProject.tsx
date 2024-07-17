@@ -52,17 +52,15 @@ const SingleProject = ({ project }: { project: Project }) => {
               return (
                 <div
                   key={i}
-                  className="flex gap-1 pl-6 text-sm text-gray-500 mb-1"
+                  className="flex gap-1 pl-6 text-xs md:text-sm tracking-wide text-gray-500 mb-1"
                 >
                   <p className="pt-1">{ReactIcons.dash}</p>
-                  <p className="sm_lap:text-xs sm_lap:tracking-wide">
-                    {detail}
-                  </p>
+                  <p>{detail}</p>
                 </div>
               );
             })}
           </div>
-          <div className="flex gap-5 flex-wrap">
+          <div className="sm:flex gap-5 flex-wrap hidden">
             {icons.map((obj, i) => {
               const { name, icon } = obj;
 
@@ -77,7 +75,7 @@ const SingleProject = ({ project }: { project: Project }) => {
               );
             })}
           </div>
-          <div className="md:hidden grid grid-cols-2 gap-x-2 mt-10">
+          <div className="md:hidden grid grid-cols-2 gap-x-2 mt-6">
             <a href={github} target="_blank" rel="noreferrer">
               <p className="flex justify-center items-center text-xl py-2 border rounded ">
                 {ReactIcons.github}

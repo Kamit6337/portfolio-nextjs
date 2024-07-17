@@ -4,75 +4,6 @@ import Image from "next/image";
 
 const ProjectsData = [
   {
-    title: "Notable",
-    category: "CRUD based Application",
-    tech: "React JS,React-Quill, Socket.io, React-Query, Tailwind-CSS, Node JS, Express JS, MongoDB, Mongoose, Passport.js, JsonWebToken",
-    image: CustomImages.notable,
-    github: "https://github.com/Kamit6337/notable-client",
-    preview: "https://notable-client.onrender.com/",
-    details: [
-      "here you can write your memories, study material, diaries and many more things",
-      "login with email or password or login with much more trustworthy, Google OAuth2.0",
-      "create notebook for each of the of category to segregate the topic",
-      "you can attach tag to each notes which help in filtering of notes",
-      "enabling text-editor to highlight or cutomise your text to make your notes much more readable and understandable to you",
-    ],
-    icons: [
-      {
-        icon: ReactIcons.reactjs,
-        name: "React JS",
-      },
-      {
-        icon: (
-          <Image
-            alt="image"
-            width={30}
-            height={30}
-            src={CustomImages.reactQuery}
-          />
-        ),
-        name: "React-Query",
-      },
-
-      {
-        icon: ReactIcons.redux,
-        name: "Redux",
-      },
-
-      {
-        icon: ReactIcons.tailwind,
-        name: "Tailwind CSS",
-      },
-      {
-        icon: ReactIcons.nodejs,
-        name: "Node JS",
-      },
-      {
-        icon: ReactIcons.express,
-        name: "Express JS",
-      },
-      {
-        icon: ReactIcons.mongodb,
-        name: "MongoDB",
-      },
-      {
-        icon: (
-          <Image
-            width={50}
-            height={50}
-            src={CustomImages.mongoose}
-            alt="mongoose"
-          />
-        ),
-        name: "Mongoose",
-      },
-      {
-        icon: ReactIcons.jsonwebtoken,
-        name: "JWT",
-      },
-    ],
-  },
-  {
     title: "VwFlex",
     category: "Video Streaming Application",
     tech: "Next JS, Tailwind-CSS, Next-Auth, MongoDB, Mongoose, JsonWebToken",
@@ -137,6 +68,75 @@ const ProjectsData = [
             alt="mongoose"
             width={50}
             height={50}
+          />
+        ),
+        name: "Mongoose",
+      },
+      {
+        icon: ReactIcons.jsonwebtoken,
+        name: "JWT",
+      },
+    ],
+  },
+  {
+    title: "Notable",
+    category: "CRUD based Application",
+    tech: "React JS,React-Quill, Socket.io, React-Query, Tailwind-CSS, Node JS, Express JS, MongoDB, Mongoose, Passport.js, JsonWebToken",
+    image: CustomImages.notable,
+    github: "https://github.com/Kamit6337/notable-client",
+    preview: "https://notable-client.onrender.com/",
+    details: [
+      "here you can write your memories, study material, diaries and many more things",
+      "login with email or password or login with much more trustworthy, Google OAuth2.0",
+      "create notebook for each of the of category to segregate the topic",
+      "you can attach tag to each notes which help in filtering of notes",
+      "enabling text-editor to highlight or cutomise your text to make your notes much more readable and understandable to you",
+    ],
+    icons: [
+      {
+        icon: ReactIcons.reactjs,
+        name: "React JS",
+      },
+      {
+        icon: (
+          <Image
+            alt="image"
+            width={30}
+            height={30}
+            src={CustomImages.reactQuery}
+          />
+        ),
+        name: "React-Query",
+      },
+
+      {
+        icon: ReactIcons.redux,
+        name: "Redux",
+      },
+
+      {
+        icon: ReactIcons.tailwind,
+        name: "Tailwind CSS",
+      },
+      {
+        icon: ReactIcons.nodejs,
+        name: "Node JS",
+      },
+      {
+        icon: ReactIcons.express,
+        name: "Express JS",
+      },
+      {
+        icon: ReactIcons.mongodb,
+        name: "MongoDB",
+      },
+      {
+        icon: (
+          <Image
+            width={50}
+            height={50}
+            src={CustomImages.mongoose}
+            alt="mongoose"
           />
         ),
         name: "Mongoose",
