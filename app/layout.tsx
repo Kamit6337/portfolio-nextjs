@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <AnalyticsProvider>
+        <AnalyticsProvider props={process.env.GA4_MEASUREMENT_ID as string}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
