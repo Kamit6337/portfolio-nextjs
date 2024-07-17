@@ -33,7 +33,6 @@ const Navbar = () => {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry.target.id, entry.isIntersecting);
         if (entry.isIntersecting) {
           setActiveLink(entry.target.id);
         }
@@ -43,10 +42,7 @@ const Navbar = () => {
     navLinkList.forEach((link) => {
       const section = document.getElementById(link.href);
       if (section) {
-        console.log(`Observing section: ${link.href}`);
         observer.observe(section);
-      } else {
-        console.log(`Non Observing section: ${link.href}`);
       }
     });
 
