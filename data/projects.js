@@ -84,7 +84,7 @@ const ProjectsData = [
     tech: "React JS,React-Quill, Socket.io, React-Query, Tailwind-CSS, Node JS, Express JS, MongoDB, Mongoose, Passport.js, JsonWebToken",
     image: CustomImages.notable,
     github: "https://github.com/Kamit6337/notable-client",
-    preview: "https://notable-client.onrender.com/",
+    preview: "https://notable-client.vercel.app",
     details: [
       "here you can write your memories, study material, diaries and many more things",
       "login with email or password or login with much more trustworthy, Google OAuth2.0",
