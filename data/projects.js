@@ -153,7 +153,7 @@ const ProjectsData = [
     tech: "React JS, React-Query, Tailwind-CSS, Redux, Node JS, Express JS, Passport.js, JsonWebToken, Stripe API, MongoDB, Mongoose, JsonWebToken",
     image: CustomImages.addtocart,
     github: "https://github.com/Kamit6337/commercify-client",
-    preview: "https://commercify-client.onrender.com/",
+    preview: "https://commercify-client.vercel.app",
     details: [
       "like Amazon, Flipkart or any other E-Commerce platform, see a collections of products of different categories",
       "login using mobile OTP which is gaining popularity now a days",
