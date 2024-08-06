@@ -1,7 +1,7 @@
 # Amit Kumar Portfolio
 
 Welcome to the **portfolio** repository!  
-You can visit the [live website](https://portfolio-nextjs-eight-rho.vercel.app)  
+You can visit the [live website](https://aminfo.vercel.app)  
 Below you'll find a description, features and screenshot of the project,
 
 ## Table of Contents
